@@ -27,8 +27,7 @@ import {
 import gql from 'graphql-tag'
 import { compose, graphql } from 'react-apollo'
 import { withRouter } from 'next/router'
-import SearchIcon from 'react-icons/lib/md/search'
-import InfoIcon from 'react-icons/lib/md/info-outline'
+import { InfoOutlineIcon, SearchIcon } from '../../lib/icons'
 
 const getTemplateRepos = gql`
   query templateListSearch {
@@ -268,7 +267,7 @@ class RepoAdd extends Component {
               href='https://github.com/orbiting/publikator-frontend/blob/master/docs/templates.md'
               target='_blank'
             >
-              <InfoIcon />
+              <InfoOutlineIcon />
             </A>
           )}
         </Interaction.H2>

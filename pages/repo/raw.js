@@ -18,8 +18,7 @@ import {
   Checkbox
 } from '@project-r/styleguide'
 import { Router } from '../../lib/routes'
-import CircleIcon from 'react-icons/lib/md/lens'
-import InfoIcon from 'react-icons/lib/md/info-outline'
+import { CircleFilledIcon, InfoOutlineIcon } from '../../lib/icons'
 import { Controlled as CodeMirror } from 'react-codemirror2'
 import {
   UncommittedChanges,
@@ -163,7 +162,7 @@ export default compose(
         </Frame.Header.Section>
         <Frame.Header.Section align='right'>
           <div style={{ padding: '35px 25px' }}>
-            <CircleIcon
+            <CircleFilledIcon
               style={{ color: validity ? colors.containerBg : colors.error }}
             />
           </div>
@@ -216,7 +215,7 @@ export default compose(
               href='https://github.com/orbiting/publikator-frontend/blob/master/docs/raw.md'
               target='_blank'
             >
-              <InfoIcon />
+              <InfoOutlineIcon />
             </A>
           </div>
           <div className='Checkbox' style={{ opacity: editMeta ? 0.5 : 1 }}>

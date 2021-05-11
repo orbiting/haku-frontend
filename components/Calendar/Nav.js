@@ -1,12 +1,11 @@
 import React from 'react'
 import { css } from 'glamor'
-import BackIcon from 'react-icons/lib/md/chevron-left'
-import ForthIcon from 'react-icons/lib/md/chevron-right'
 import {
   IconButton,
   fontFamilies,
   plainButtonRule
 } from '@project-r/styleguide'
+import { ChevronLeftIcon, ChevronRightIcon } from '../../lib/icons'
 import { datePickerFormat, reformatUrlDate } from '../../lib/utils/calendar'
 import withT from '../../lib/withT'
 
@@ -36,7 +35,7 @@ export const Nav = ({ children }) => (
 
 export const NavButton = ({ goBack, goForth }) => (
   <IconButton
-    Icon={goBack ? BackIcon : ForthIcon}
+    Icon={goBack ? ChevronLeftIcon : ChevronRightIcon}
     onClick={goBack || goForth}
     style={styles.navButton}
     size={36}

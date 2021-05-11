@@ -1,9 +1,8 @@
 import React from 'react'
 import { css } from 'glamor'
 
-import CloseIcon from 'react-icons/lib/md/close'
-
 import { A, Label, colors } from '@project-r/styleguide'
+import { CloseIcon } from '../../../../lib/icons'
 
 import RepoSearch from '../../utils/RepoSearch'
 import { RepoLink } from '../../utils/github'

@@ -1,9 +1,7 @@
 import React from 'react'
 
 import { A, Radio, Label, RawHtml, Interaction } from '@project-r/styleguide'
-import MdClose from 'react-icons/lib/md/close'
-import MdAdd from 'react-icons/lib/md/add'
-import MdInfoOutline from 'react-icons/lib/md/info-outline'
+import { CloseIcon, AddIcon, InfoOutlineIcon } from '../../../../lib/icons'
 import { css } from 'glamor'
 
 import withT from '../../../../lib/withT'
@@ -129,7 +127,7 @@ export default withT(({ t, editor, node }) => {
     <>
       {!paynotes.length ? (
         <A href='#add' onClick={addPaynote}>
-          <MdAdd /> {t('metaData/paynotes/add')}
+          <AddIcon /> {t('metaData/paynotes/add')}
         </A>
       ) : (
         <>
@@ -138,7 +136,7 @@ export default withT(({ t, editor, node }) => {
             return (
               <div key={i} {...styles.container}>
                 <A href='#remove' onClick={removePaynote(i)} {...styles.close}>
-                  <MdClose size={20} fill='#000' />
+                  <CloseIcon size={20} fill='#000' />
                 </A>
                 <div>
                   <Label>
@@ -169,7 +167,7 @@ export default withT(({ t, editor, node }) => {
           })}
           <p {...styles.help}>
             <small>
-              <MdInfoOutline style={{ verticalAlign: 'sub' }} />{' '}
+              <InfoOutlineIcon style={{ verticalAlign: 'sub' }} />{' '}
               <RawHtml
                 dangerouslySetInnerHTML={{
                   __html: t('metaData/paynotes/help')
@@ -178,7 +176,7 @@ export default withT(({ t, editor, node }) => {
             </small>
           </p>
           <A href='#add' onClick={addPaynote} {...styles.add}>
-            <MdAdd /> {t('metaData/paynotes/new')}
+            <AddIcon /> {t('metaData/paynotes/new')}
           </A>
         </>
       )}

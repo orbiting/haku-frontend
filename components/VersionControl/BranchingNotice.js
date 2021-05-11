@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import { Subscription } from 'react-apollo'
-import NewerVersionIcon from 'react-icons/lib/md/call-split'
 
 import { Button, colors } from '@project-r/styleguide'
-
+import { NewerVersionIcon } from '../../lib/icons'
 import { repoSubscription } from './index'
 import { Link } from '../../lib/routes'
 

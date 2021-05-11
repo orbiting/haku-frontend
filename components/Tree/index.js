@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { css } from 'glamor'
-import LocalIcon from 'react-icons/lib/md/lock-open'
-import CheckIcon from 'react-icons/lib/md/check'
-import TagIcon from 'react-icons/lib/md/grade'
+import { CheckIcon, LockOpenIcon, StarFilledIcon } from '../../lib/icons'
 import { Interaction, Label } from '@project-r/styleguide'
 import { lab } from 'd3-color'
 import { Link } from '../../lib/routes'
@@ -311,7 +309,7 @@ class Tree extends Component {
                       <br />
                       {hasLocalVersion && (
                         <span {...styles.milestone}>
-                          <LocalIcon
+                          <LockOpenIcon
                             color='#000'
                             size={MILESTONEICON_SIZE}
                             style={styles.checkIcon}
@@ -324,7 +322,7 @@ class Tree extends Component {
                       {commit.milestones.map((milestone, i) => (
                         <span {...styles.milestone} key={i}>
                           {milestone.immutable ? (
-                            <TagIcon
+                            <StarFilledIcon
                               color='#000'
                               size={MILESTONEICON_SIZE}
                               style={styles.checkIcon}

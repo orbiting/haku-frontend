@@ -2,10 +2,7 @@ import React from 'react'
 import { css } from 'glamor'
 
 import { fontStyles, colors } from '@project-r/styleguide'
-
-import DownIcon from 'react-icons/lib/md/arrow-drop-down'
-import UpIcon from 'react-icons/lib/md/arrow-drop-up'
-
+import { DropDownIcon, DropUpIcon } from '../../lib/icons'
 import { Link } from '../../lib/routes'
 
 const styles = {
@@ -100,9 +97,9 @@ export const ThOrder = ({
           {children}
           {activeField === field &&
             (activeDirection === 'DESC' ? (
-              <DownIcon size={20} {...styles.orderLinkIcon} />
+              <DropDownIcon size={20} {...styles.orderLinkIcon} />
             ) : (
-              <UpIcon size={20} {...styles.orderLinkIcon} />
+              <DropUpIcon size={20} {...styles.orderLinkIcon} />
             ))}
         </a>
       </Link>

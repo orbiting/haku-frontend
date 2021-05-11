@@ -5,21 +5,17 @@ import { meQuery } from '../../lib/withMe'
 import { css } from 'glamor'
 
 import withT from '../../lib/withT'
-
 import ErrorMessage from '../ErrorMessage'
-
 import { SUPPORTED_TOKEN_TYPES } from '../constants'
 
-import EmailTokenIcon from 'react-icons/lib/md/mail-outline'
-import AppTokenIcon from 'react-icons/lib/md/phonelink'
-
+import { MailOutlineIcon, PhonelinkIcon } from '../../lib/icons'
 import { Interaction, Label, A, RawHtml } from '@project-r/styleguide'
 
 const { H3, P } = Interaction
 
 const Icons = {
-  EMAIL_TOKEN: EmailTokenIcon,
-  APP: AppTokenIcon
+  EMAIL_TOKEN: MailOutlineIcon,
+  APP: PhonelinkIcon
 }
 
 const styles = {

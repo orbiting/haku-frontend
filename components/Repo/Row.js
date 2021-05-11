@@ -1,6 +1,5 @@
 import React from 'react'
-import LockIcon from 'react-icons/lib/md/lock'
-import PublicIcon from 'react-icons/lib/md/public'
+import { LockIcon, PublicIcon } from '../../lib/icons'
 import { renderMdast } from 'mdast-react-render'
 import { matchType } from 'mdast-react-render/lib/utils'
 

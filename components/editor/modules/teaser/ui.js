@@ -7,6 +7,7 @@ import {
   P,
   useColorContext
 } from '@project-r/styleguide'
+
 import React, { useState } from 'react'
 import { css } from 'glamor'
 import { buttonStyles, createPropertyForm, matchBlock } from '../../utils'
@@ -20,15 +21,17 @@ import { getNewBlock } from './'
 
 import { getSubmodules } from './serializer'
 
-import ArrowLeftIcon from 'react-icons/lib/md/arrow-back'
-import ArrowRightIcon from 'react-icons/lib/md/arrow-forward'
-import ArrowUpIcon from 'react-icons/lib/md/arrow-upward'
-import ArrowDownIcon from 'react-icons/lib/md/arrow-downward'
-import CloseIcon from 'react-icons/lib/md/close'
-import MoveIntoIcon from 'react-icons/lib/md/subdirectory-arrow-right'
-import MoveToEndIcon from 'react-icons/lib/md/vertical-align-bottom'
-import CopyToClipboard from 'react-icons/lib/md/content-copy'
-import Check from 'react-icons/lib/md/check'
+import {
+  ArrowDownIcon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  ArrowUpIcon,
+  CloseIcon,
+  CheckIcon,
+  MoveIntoIcon,
+  MoveToEndIcon,
+  CopyToClippboardIcon
+} from '../../../../lib/icons'
 
 import UIForm from '../../UIForm'
 import ImageInput from '../../utils/ImageInput'
@@ -608,9 +611,9 @@ const CopyMdButton = ({ node, serializer }) => {
       title={success ? 'Copied to clipboard!' : 'Copy to clipboard'}
     >
       {success ? (
-        <Check size={24} {...colorScheme.set('fill', 'primary')} />
+        <CheckIcon size={24} {...colorScheme.set('fill', 'primary')} />
       ) : (
-        <CopyToClipboard size={24} />
+        <CopyToClippboardIcon size={24} />
       )}
     </MarkButton>
   )

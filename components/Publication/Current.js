@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { graphql, compose } from 'react-apollo'
 import gql from 'graphql-tag'
 
-import LockIcon from 'react-icons/lib/md/lock'
-import PublicIcon from 'react-icons/lib/md/public'
+import { PublicIcon, LockIcon } from '../../lib/icons'
 
 import {
   InlineSpinner,

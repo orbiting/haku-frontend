@@ -3,9 +3,7 @@ import { css } from 'glamor'
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import ReactDiffViewer, { DiffMethod } from 'react-diff-viewer'
-import MdClose from 'react-icons/lib/md/close'
-import MdMoreHoriz from 'react-icons/lib/md/more-horiz'
-import MdWrapText from 'react-icons/lib/md/wrap-text'
+import { CloseIcon, TextDiffIcon, MoreHorizIcon } from '../../lib/icons'
 
 import {
   Overlay,
@@ -71,7 +69,7 @@ export default function TreeDiff(props) {
 
   return (
     <>
-      <MdWrapText size={18} {...styles.linkDiff} onClick={handleOnClick} />
+      <TextDiffIcon size={18} {...styles.linkDiff} onClick={handleOnClick} />
       {isVisible && (
         <Query query={TREE_DIFF_QUERY} variables={variables}>
           {({ loading, error, data }) => (
@@ -87,7 +85,7 @@ export default function TreeDiff(props) {
                 </Interaction.Emphasis>
                 <OverlayToolbarConfirm
                   onClick={handleOnClose}
-                  label={<MdClose size={24} />}
+                  label={<CloseIcon size={24} />}
                 />
               </OverlayToolbar>
               <OverlayBody style={{ fontSize: 13 }}>
@@ -102,7 +100,7 @@ export default function TreeDiff(props) {
                       oldValue={data.repo.parentCommit.markdown}
                       compareMethod={DiffMethod.WORDS_WITH_SPACE}
                       extraLinesSurroundingDiff={1}
-                      codeFoldMessageRenderer={() => <MdMoreHoriz />}
+                      codeFoldMessageRenderer={() => <MoreHorizIcon />}
                     />
                   )}
                 />

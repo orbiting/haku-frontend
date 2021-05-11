@@ -4,7 +4,7 @@ import React from 'react'
 import { FigureGroupButton, FigureGroupForm } from './ui'
 import { matchBlock } from '../../utils'
 import { createRemoveEmptyKeyHandler } from '../../utils/keyHandlers'
-import GalleryIcon from 'react-icons/lib/md/filter'
+import { GalleryIcon } from '../../../../lib/icons'
 
 export const getData = data => ({
   columns: 2,
@@ -40,9 +40,10 @@ export const fromMdast = ({ TYPE, subModules }) => (
 
   const caption = node.children[node.children.length - 1]
   const hasCaption = caption.type === 'paragraph'
-  const figures = (hasCaption ? node.children.slice(0, -1) : node.children).map(
-    v => figureSerializer.fromMdast(v)
-  )
+  const figures = (hasCaption
+    ? node.children.slice(0, -1)
+    : node.children
+  ).map(v => figureSerializer.fromMdast(v))
   const nodes = hasCaption
     ? figures.concat(captionModule.helpers.serializer.fromMdast(caption))
     : figures

@@ -5,11 +5,12 @@ import {
   fontStyles,
   useColorContext
 } from '@project-r/styleguide'
-
-import MdPhoneIphone from 'react-icons/lib/md/phone-iphone'
-import MdTabletMac from 'react-icons/lib/md/tablet-mac'
-import MdLaptopMac from 'react-icons/lib/md/laptop-mac'
-import MdDesktopMac from 'react-icons/lib/md/desktop-mac'
+import {
+  DevicePhoneIcon,
+  DeviceTabletIcon,
+  DeviceLaptopIcon,
+  DeviceDesktopIcon
+} from '../../lib/icons'
 
 const styles = {
   container: css({
@@ -49,22 +50,22 @@ const screenSizes = [
   {
     name: 'phone',
     label: 'Mobile',
-    Icon: MdPhoneIphone
+    Icon: DevicePhoneIcon
   },
   {
     name: 'tablet',
     label: 'Tablet',
-    Icon: MdTabletMac
+    Icon: DeviceTabletIcon
   },
   {
     name: 'laptop',
     label: 'Laptop',
-    Icon: MdLaptopMac
+    Icon: DeviceLaptopIcon
   },
   {
     name: 'desktop',
     label: 'Desktop',
-    Icon: MdDesktopMac
+    Icon: DeviceDesktopIcon
   }
 ]
 

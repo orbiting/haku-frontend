@@ -21,8 +21,7 @@ import {
   UNCOMMITTED_CHANGES_POLL_INTERVAL_MS,
   MILESTONES_POLL_INTERVAL_MS
 } from '../../lib/settings'
-import OfflineIcon from 'react-icons/lib/md/signal-wifi-off' // portable-wifi-off
-
+import { OfflineIcon } from '../../lib/icons'
 import createDebug from 'debug'
 
 import { getMilestones } from './Checklist'

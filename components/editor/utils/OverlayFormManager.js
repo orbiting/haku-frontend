@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 import SlatePropTypes from 'slate-prop-types'
 import { css } from 'glamor'
 import { useColorContext } from '@project-r/styleguide'
-
-import MdEdit from 'react-icons/lib/md/edit'
+import { EditIcon } from '../../../lib/icons'
 
 import OverlayForm from './OverlayForm'
 
@@ -32,7 +31,7 @@ const EditButton = ({ onClick, size, parentType }) => {
         left: !parentType ? 0 : -40
       }}
     >
-      <MdEdit {...colorScheme.set('fill', 'text')} />
+      <EditIcon {...colorScheme.set('fill', 'text')} />
     </div>
   )
 }
